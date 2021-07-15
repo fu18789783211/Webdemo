@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>列表</title>
+</head>
+
+<body>
+    <ul> type=disc(实心原点，默认)，square(实心方点)，circle(空心圆)<br />
+        li是一个容器级标签，li里面什么都能放，甚至可以再放一个ul。<br />
+        <div>无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt;</div>
+        <li type="circle">第一项
+            <ul>
+                <li>第一项中的一项</li>
+            </ul>
+        </li>
+        <li>第二项</li>
+    </ul>
+
+    <ol type="1">
+        <p>ol的type="属性值"。属性值可以是：1(阿拉伯数字，默认)、a、A、i、I。结合start属性表示从几开始</p>
+        有序列表&lt;ol&gt;，里面的每一项是&lt;li&gt;
+        <li>第一项</li>
+        <li>第二项</li>
+    </ol>
+
+    <dl>定义列表
+        <dt>小标题&nbsp;&nbsp;如购物指南</dt>
+        <dd>
+            小点 可以包括链接
+            <a href="#abc">如购物流程</a>
+        </dd>
+    </dl>
+
+    <table>表格标签<br />
+        <tr>
+            td为单元格
+            <td>第一列</td>
+            <td>第二列</td>
+            <td>&lt;--第一行</td>
+        </tr>
+        <tr>
+            tr由一行一行组成
+            <td>第一列</td>
+            <td>第二列</td>
+            <td>&lt;--第二行</td>
+        </tr>
+    </table>
+    <table border="1" style="border-collapse: collapse;" bordercolor="red" align="left" bgcolor="#affff9"
+        bordercolorlight="#99cc77" bordercolordark="#99cc88">
+        <tr dir="rtl">
+            <p>dir属性为文本内容在单元格中开始位置</p>
+            <td>border为边框，属性值为边框厚度</td>
+            <td>style="border-collapse: collapse为两边框合并</td>
+            <td>align为表格在显示中的屏对齐方式</td>
+        </tr>
+        <tr>
+            <td>width控制宽度，height控制高度</td>
+            <td>bgcolor表格的背景颜色</td>
+            <td rowspan="2">bordercolordark和bordercolorlight设置3D效果</td>
+        </tr>
+        <tr>
+            <td>colspan为横向合并单元格</td>
+            <td>rowspan为纵向合并单元格</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

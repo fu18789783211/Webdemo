@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>内嵌框架</title>
+</head>
+
+<body>
+    <a href="图片.html" target="mainframe">图片网页</a>
+    <div> &lt;iframe&gt;是&lt;body&gt;的子标记 </div>
+    <iframe src="标题.html" name="mainframe" width="500" height="500" scrolling="ture"></iframe>scrolling属性为是否需要滚动条<br />
+    <h2>表单</h2>
+    <div>表单标签用&lt;form&gt;表示，用于与服务器的交互。表单就是收集用户信息的，就是让用户填写的、选择的。</div>
+    <form>
+        默认输入文本<input type="text"><br />
+        用户输入密码<input type="password"><br>
+        单选按钮<input type="radio">单选按钮，名字相同的按钮作为一组进行单选（单选按钮，天生是不能互斥的，如果想互斥，必须要有相同的name属性。name就是“名字”。 ）<br>
+        多选按钮<input type="checkbox">name 属性值相同的按钮作为一组进行选择<br>
+        隐藏框<input type="hidden">包含不希望用户看到的信息<br>
+        普通按钮<input type="button"><br>
+        提交按钮<input type="submit">传送当前表单的数据给服务器或其他程序处理,表单就会被提交到form标签的action属性中指定的那个页面中<br>
+        重置按钮<input type="reset">清空当前表单数据，恢复初始默认值<br>
+        图片按钮<input type="image">显示图片<br>
+        文件选择框<input type="file">如果要限制上传文件的类型，需要配合JS来实现验证。对上传文件的安全检查：一是扩展名的检查，二是文件数据内容的检查<br>
+        <b>
+            <div>value属性是文本框已填好的内容</div>
+        </b>
+        <b>
+            <div>size为文本框字符的个数</div>
+        </b>
+        <b>属性readonly和disabled文本框只读，不能编辑</b><br>
+        <input type="datetime-local">本地时间
+    </form>
+    action：指定表单数据的处理程序，一般是PHP，如：action=“login.php”
+    <form action="登录.php">
+        姓名: <input type="text" size="10"><br>
+        性别：<input type="radio" name="xingbie">男 <input type="radio" name="xingbie">女<br>
+        密码：<input type="password" size="20"><br>
+        爱好：<input type="checkbox" name="aihao">体育 <input type="checkbox" name="aihao">语文<br>
+        <input type="submit">
+    </form>
+    <form action="ss.php">
+        <table border="5">
+            <tr>
+                <td>姓名:<input type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td> 性别：<input type="radio" name="sex">男 <input type="radio" name="sex">女</td>
+            </tr>
+            <tr>
+                <select size="1" multipie="">
+                    <option>option属性selected为预选中</option>
+                    <option selected=""> select的属性size大于1，为滚动，否则为下拉</option>
+                    <option>select属性multiple可以对下拉列表中的选项进行多选</option>
+                </select>
+            </tr>
+        </table>
+        <textarea>textarea属性rows为文本区域初始行数</textarea>
+        <textarea rows="5">textarea 属性cols为文本区域初始列数</textarea>
+    </form>
+    <b>表单的语义化,表单的区块化</b>
+    <form action="ss.php">
+        <fieldset>
+            <legend> 区块标题</legend>
+            姓名：<input type="text">
+            性别：<input type="radio" name="sex" id="nan">男 <input type="radio" name="sex" id="nv">女<br>
+            <label for="nan">男</label> <label for="nv">女</label>
+            <b>通过label把input和汉字连接起来作为整体。</b>
+        </fieldset>
+        <b>任何表单元素都有label</b><br>
+        例如多选框：<input type="checkbox" name="dl">
+        <label for="dl">7天免登录</label>
+        颜色<input type="color">
+    </form>
+</body>
+
+</html>
