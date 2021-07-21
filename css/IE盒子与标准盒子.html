@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE盒子与标准盒子</title>
+    <style>
+        .IE{
+            /* border-box此时设置的 width 和 height 是盒子的总宽高。盒子的实际宽度 = 设置的 width。此时改变 padding 和 border 的大小，会改变内容的宽高，盒子的总宽高不变。*/
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            padding: 20px 20px;
+        }
+        .bz{
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+            padding: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="IE">IE盒子</div>
+    <div class="bz">标准盒子</div>
+    在标准盒子模型中，width 和 height 指的是内容区域的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。
+    IE盒子模型中，width 和 height 指的是内容区域+border+padding的宽度和高度。
+</body>
+</html>

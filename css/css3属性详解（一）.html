@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3属性详解（一）</title>
+    <style>
+        p{
+            text-align: left;
+            color: black;
+            /*text-shadow:水平位移 垂直位移 模糊程度 阴影颜色*/
+            text-shadow: 20px 30px 3px green;
+        }
+        .ao{
+            text-shadow: -1px -1px 1px #fff,1px 1px 1px #000;
+            font-size: 100px;
+            font-weight:bold ;
+        }
+        .tu{
+            text-shadow: 1px 1px 1px #000 ，-1px -1px -1px #fff;
+            font-size: 100px;
+            font-weight:bold ;
+        }
+        div{
+            font-family:"Microsoft Yahei";
+        }
+        body{
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>文本</h1>
+    <h2>文本阴影</h2>
+    <p>设置文本阴影</p>
+    <h3>凹凸文字效果</h3>
+    <div class="ao">凹</div>
+    <div class="tu">凸</div>
+</body>
+</html>

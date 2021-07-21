@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的权重</title>
+    <style>
+        .qz1{
+            color: red;
+        }
+        .qz2{
+            color: royalblue !important;
+        }
+        .qz3{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="qz1">
+        <div class="qz2">
+            <div class="qz3">
+                <p>权重相同时，遵循就近原则</p>
+                <P> !important可以把一个属性权重变成无穷大</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html
