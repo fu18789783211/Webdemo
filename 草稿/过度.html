@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>过渡</title>
   <style>
     .transition{
       width: 100px;
       height: 100px;
       background-color: red;
-
       transition: background-color .3s ease-in-out;
     }
     .transition:hover {
@@ -18,11 +17,55 @@
       height: 200px;
       background-color: blue;
     }
+    .scale{
+      width: 100px;
+      height: 100px;
+      background-color:green;
+      transition: all .5s ease;
+      text-align: center;
+    }
+    .scale:hover{
+      width: 100px;
+      height: 100px;
+      background-color:green;
+      transform: scale(2,0.5);
+      text-align: center;
+    }
+    .translate{
+      width: 100px;
+      height: 100px;
+      background:  #ff0;
+      transition: all 3s ease;
+      text-align: center;
+    }
+    .translate:hover{
+      transform: translate(100px,100px);
+    }
+    .rotate{
+      width: 100px;
+      height: 100px;
+      background: #354672;
+      transition: all 3s ease;
+      text-align: center;
+    }
+    .rotate:hover{
+      transform: rotate(90deg);
+    }
+
   </style>
 </head>
 <body>
   <div class="transition">
     过度
+  </div>
+  <div class="scale">
+    缩放
+  </div>
+  <div class="translate">
+    位移
+  </div>
+  <div class="rotate">
+    旋转
   </div>
 </body>
 </html>
