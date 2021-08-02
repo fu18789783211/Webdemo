@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css盒模型详解</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 1px;
+            padding: 50px 40px 40px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>无论是div、span、还是a都是盒子</h2>
+    <div>width和height：内容的宽度、高度（不是盒子的宽度、高度）。
+        padding：内边距。
+        border：边框。
+        margin：外边距。</div>
+        <div> padding &nbsp;综合属性写法（上右下左）顺时针，中间留空格</div>
+        <div>padding中小属性层叠大属性，小属性如果在大属性的前一行，则小属性被层叠掉</div>
+        <div>真实占有宽度 = 左border + 左padding + width + 右padding + 右border</div>
+</body>
+</html>

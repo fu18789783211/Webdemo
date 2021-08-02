@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="样式表与选择器.css">
+    <title>样式表与选择器</title>
+    <style>
+        p{
+            font-weight: bold;
+            font-style: italic;
+            color: mediumvioletred;
+        }
+        #id{
+            color: navy;
+            font-size: 30px;
+            border: 2px dashed blue;
+        }
+        .class{
+            border: dotted red;
+            color: springgreen;
+        }
+        *{
+            margin-top: 20px;
+            margin-right: 10px;
+        }
+        div b i{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>这行属于内嵌样式表</p>
+    <div style="color: lime;background-color: maroon;">这行属于行内样式表</div>
+    <span>这行属于引入外部样式表文件</span>
+    <div>这一行是<p>标签选择器</p>所有的标签都可以被选择</div>
+    <div id="id">id选择器在css中用 # 来定义</div>
+    <div class="class"> 在需要的地方用class属性来使用类选择器，在css中用 . 加自定义名字</div>
+    <div>通用选择器适用于所有标签</div>
+    <div>后代选择器定义时<b>用空格隔开，<i>由先到后，</i>但是有作用的是</b>最后一代标签</div>
+</body>
+</html>

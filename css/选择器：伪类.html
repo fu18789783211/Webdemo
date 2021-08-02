@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器：静态和动态</title>
+    <style>
+        /*a:link为点击之前*/
+        a:link{
+            color: red;
+        }
+        /*a:visited为点击之后*/
+        a:visited{
+            color: cyan;
+        }
+        /*a:hover为鼠标悬停*/
+        a:hover{
+            color: saddlebrown;
+        }
+        /*a:active为鼠标按住不松手时*/
+        a:active{
+            color: seagreen;
+        }
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .nav{
+            width: 50%;
+            height: 50%;
+            color: red;
+            border: 1px solid blue;
+        }
+        .nav ul{
+            list-style: none;
+        }
+        .nav ul li{
+            text-align: center;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .nav ul li a{
+            color: brown;
+        }
+        .nav ul li a.link{
+            color: chartreuse;
+        }
+        /* focus为获取焦点时*/
+        input:focus{
+            color: rgb(255, 0, 34);
+            border: rgb(9, 0, 128);
+        }
+        label:hover{
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.baidu.com">超链接a标签的四种状态</a>
+    <!-- 伪类选择器分为两种。
+
+（1）静态伪类：只能用于超链接的样式。如下：
+
+:link 超链接点击之前
+:visited 链接被访问过之后
+PS：以上两种样式，只能用于超链接。
+
+（2）动态伪类：针对所有标签都适用的样式。如下：
+
+:hover “悬停”：鼠标放到标签上的时候
+:active “激活”： 鼠标点击标签，但是不松手时。
+:focus 是某个标签获得焦点时的样式（比如某个输入框获得焦点） -->
+    <div class="nav">
+        <ul>
+            <li><a href="">超链接</a></li>
+            <li><a href="">的</a></li>
+            <li><a href="">美化</a></li>
+        </ul>
+    </div>
+    <input type="text">
+    <label>动态伪类</label>
+</body>
+</html>

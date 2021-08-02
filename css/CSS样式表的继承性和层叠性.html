@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css样式表的继承性与叠层性</title>
+    <style>
+        div .name2 p{
+            color: hotpink;
+        }
+        div .name1 .name2 p{
+            color: blue;
+        }
+        div .name1 p{
+            color: brown;
+        }
+        #i1 p{
+            color: gold;
+        }
+        ul li{
+            color: blue;
+        }
+        ul li.red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>div的css属性可以作用在下一代元素上，直到最后一个元素</p>
+        <p>关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的</p>
+        <p>关于盒子，定位，布局都不能继承</p>
+    </div>
+    <div class="name1" id="i1">
+        <div class="name2" id="i2">
+            <div class="name3" id="i3">
+                <p>叠层性是就是css处理冲突的能力；<b>选择器排序的优先级</b>为：ID选择器 (百位)> 类选择器 （十位）> 标签选择器（个位）</p>
+                <p>只有选中文字所在标签，才能计算权重</p>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li class="red">第一项为红</li>
+        <li>第二项为蓝</li>
+        <li>第二项为蓝</li>
+    </ul>
+</body>
+</html>
