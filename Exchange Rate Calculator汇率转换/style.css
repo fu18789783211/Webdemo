@@ -1,0 +1,79 @@
+*{
+    box-sizing:border-box;/* IE盒子*/
+}
+/* :root 这个 CSS 伪类匹配文档树的根元素。对于 HTML 来说，:root 表示 <html> 元素，除了优先级更高之外，与 html 选择器相同。 */
+/* :root{
+    color: #5fbaa7;
+} */
+body{
+    margin: 0;
+    padding: 0;
+}
+.center {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+h1{
+    color: #5fbaa7;
+}
+p{
+    color: black;
+}
+.money-top{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.money-top select{
+    font-size: 16px;
+    border: 1px solid #dedede; 
+    padding: 10px;
+}
+.money-top input{
+    text-align: right;
+    border: 0px;
+    font-size: 30px;
+    outline: none;
+} 
+.center-swap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.center-swap input{
+    background-color: #5fbaa7;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.center-swap .display-rate{
+    color: #5fbaa7;
+    font-size: 14px;
+    padding:0 10px;
+}
+.money-bottom{
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between;
+}
+.money-bottom select{
+    font-size: 16px;
+    border: 1px solid #dedede; 
+    padding: 10px;
+
+}
+.money-bottom input{
+    text-align: right;
+    border: 0;
+    font-size: 30px;
+    outline: none;/* outline与input的样式作用不同*/
+}
+
+
