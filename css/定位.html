@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        .out {
+            width: 300px;
+            height: 300px;
+            padding:0;
+            margin: 100px;
+            border: 2px solid;
+        }
+
+        .relative {
+            position: relative;
+            left: 20px;
+            top: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .absolute {
+            position: absolute;/* 相对于除了static定位以外的第一个父元素进行定位 */
+            left: 200px;
+            top: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+        }
+        .fixed {
+            position: fixed; /* 相对于浏览器窗口进行定位 */
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .text{
+            position: relative;
+            left: 0%;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        out
+        <!-- 值为relative相对于父盒 -->
+        <div class="relative">
+            relative
+            <!-- 相对于除了static定位以外的第一个父元素进行定位-->
+            <div class="absolute">absolute 相对于relative</div>
+        </div>
+        <div class="fixed">fixed</div>
+    </div>
+    <div class="text">单独</div>
+</body>
+</html>

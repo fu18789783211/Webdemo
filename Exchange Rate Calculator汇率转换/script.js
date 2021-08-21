@@ -1,35 +1,51 @@
-const pick_one=document.getElementById('pick-one');
-const enter_one=document.getElementById('enter-one');
-const enter_swap=document.getElementById('enter-swap');
-const display_rate=document.getElementById('rate');
-const pick_two=document.getElementById('pick-two');
-const enter_two=document.getElementById('enter-two');
+//定义事件变量
+const pick_one = document.getElementById('pick-one');
+const enter_one = document.getElementById('enter-one');
+const enter_swap = document.getElementById('enter-swap');
+const display_rate = document.getElementById('rate');
+const pick_two = document.getElementById('pick-two');
+const enter_two = document.getElementById('enter-two');
+let list = {};
 
-function swap_rate(){
-    // 用新的变量，通过id访问value
-    const pick_onest=pick_one.value ;
-    const pick_twost=pick_two.value ;
-    fetch("https://open.exchangerate-api.com/v6/latest")
-    .then( res => res.json())
-    .then(data =>{
-        console.log(data);
-        const rate=data.rates[pick_twost]/data.rates[pick_onest];
-        display_rate.innerText=`1${pick_onest}=${rate}${pick_twost}`;
-        enter_two.value=(enter_one.value * (rate)).toFixed(2);
-    });
+(function () {
+  fetch("http://localhost:3000/exchage-rate/list")
+  .then(one=>one.json())
+    .then((data = {}) => {
+        list = data;
+      let html = '';
+      for (let key in data) {
+        html += `<option value="${data[key]}-${key}">${key}</option> \n`
+      }
+      pick_one.innerHTML = html;
+      pick_two.innerHTML = html;
+      caculateRate();
+    })
+})()
+
+function caculateRate () {
+    const pick_onest=pick_one.value.split('-') ;
+    const pick_twost=pick_two.value.split('-')  ;
+    pick_onest[0] = parseInt(pick_onest[0]);
+    pick_twost[0] = parseInt(pick_twost[0]);
+
+    const rate= pick_twost[0] / pick_onest[0];
+    display_rate.innerText=`1 ${pick_onest[1]}=${rate} ${pick_twost[1]}`;//显示
+    enter_two.value=(enter_one.value * (rate)).toFixed(2);
 }
 
-pick_one.addEventListener('change',swap_rate());
-pick_one.addEventListener('input',swap_rate());
-pick_one.addEventListener('change',swap_rate());
-pick_one.addEventListener('input',swap_rate());
-
-
+//swap事件
 enter_swap.addEventListener('click',() => {
     const temp=pick_one.value;
     pick_one.value=pick_two.value;
     pick_two.value=temp;
-    swap_rate();
+    caculateRate();
 });
 
-swap_rate();
+pick_one.addEventListener('change', () => {
+  caculateRate();
+})
+
+
+pick_two.onchange = () => {
+  caculateRate();
+}

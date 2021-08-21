@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>举例1：点击按钮时，显示和隐藏盒子</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">隐藏</button>
+    <div>
+        生命一号
+    </div>
+    <script>
+        var btn=document.getElementById("btn");
+        var div1=document.getElementsByTagName("div")[0];   
+        // 绑定事件,点击时
+        btn.onclick=function(){
+            // 点击button 
+            if(this.innerHTML==="隐藏")
+            {
+                div1.classname="hide";//获取或设定属性值
+                btn.innerHTML="显示";//修改元素的内容
+            }
+            else{
+                div1.classname="show";
+                btn.innerHTML="隐藏";
+            }
+        }
+    </script>
+</body>
+</html>

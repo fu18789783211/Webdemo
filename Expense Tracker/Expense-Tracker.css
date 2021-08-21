@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 0 ;
+    font-family: 'Lato', sans-serif;
+}
+.title{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 24px 0;
+}
+.detail{
+    margin: 27px 120px;
+    width: 350px;
+}
+.balance{
+    width: 350px;
+    font-weight: bold;
+    display:block;
+    text-align: left;
+    font-size: 1em;
+}
+.balance .price{
+    font-size: 2em;
+}
+.poise{
+    width: 350px;
+    height: 93px;
+    background-color: #fff;
+    box-shadow: 0 0 3px #888;
+    margin: 25px 0;
+    padding: 25px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.income{
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #fff;
+}
+.in-price{
+    background-color: #fff;
+    color: #2ecc71;
+    font-size: 1.2em; 
+    text-align: center;
+}
+.line{
+    width: 1px ;
+    border: 1px solid #e0e0e0;
+}
+.expense{
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #fff;
+}
+.ex-price{
+    background-color: #fff;
+    color: #c0392b;
+    font-size: 1.2em; 
+    text-align: center;
+}
+.history{
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 35px;
+}
+.h-line{
+    width: 350px;
+    margin-top: 7px;
+    border:1px solid #bbb;
+}
+.add-item{
+    padding: 10px;
+    width: 350px;
+    height: 39px;
+    box-shadow: 0 0 3px #888;
+    margin: 10px 0;
+    border-right: 5px solid #2ecc71;
+    font-weight: normal;
+    
+}  
+.add-item:hover>.btn{
+    visibility:collapse;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: white;
+    color: white;
+    font-size: 5px;
+    float: left;
+    margin-left: -30px;
+    visibility: hidden;
+}
+
+.detail-left{
+
+}
+.detail-right{
+    margin-top: -21px;
+    float: right;
+}
+.e-text{
+    display: inline-block;
+    margin: 10px 0;
+}
+input{
+    width: 350px;
+    height: 40px;
+    border:1px solid #bbb;
+    padding: 10px;
+    font-size: 16px;
+}
+.submit input{
+    height: 38px;
+    font-size: 16px Arial;
+    color: #ffffff;
+    background-color: #9c88ff;
+    margin-top: 10px;
+}

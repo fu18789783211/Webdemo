@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 创建正则表达式的对象
+        // 方式一：使用构造函数创建正则表达式的对象
+        // 既可以传一个参数，也可以传两个参数。但是参数必须是字符串
+        var abc = new RegExp('正则表达式');
+        console.log(abc);
+        // VM411:1 /正则表达式/
+        console.log(typeof abc);
+        // VM458:1 object
+
+
+        var reg = new RegExp('a');//定义正则表达式，检查一个字符串中是否含有 a
+        var str1 = 'string1';
+        var str2 = 'string2';
+        console.log(reg.test(str1));//test用来判断字符串是否符合之前定义的规则。
+        console.log(reg.test(str2));
+        // VM1072:4 false
+        // VM1072:5 false
+
+        // 方式二：使用字面量创建正则表达式
+        var 变量 = /正则表达式/;  // 注意，这个语法里没有引号
+        var 变量 = /正则表达式/匹配模式;  // 注意，这个语法里没有引号
+
+        var reg = /A/; // 定义正则表达式的规则：检查一个字符串中是否含有 a。忽略大小写。这种创建方法没有引号
+        var str = "qiangu";
+        console.log(typeof reg);  // 打印结果：object
+        console.log(reg.test(str)); // 打印结果：true
+        // VM1111: 4 object
+        // VM1111: 5 true
+
+        var reg = /test/g;//匹配模式如果是g，慎用test（）；g模式下会生成lastindex参数   
+        // 当设置全局标志 /g 时，一旦字符串中还存在匹配，test() 方法都将返回 true，
+        // 同时匹配成功后将把 lastIndex 属性的值设置为上次匹配成功结果之后的第一个字符所在的位置，
+        // 下次匹配将从 lastIndex 指示的位置开始；匹配不成功时返回 false，同时将 lastIndex 属性的值重置为 0。
+        var str = '_test_test';
+        console.log(reg.test(str)); // true
+        console.log(reg.lastIndex); // 5
+
+        console.log(reg.test(str)); // true
+        console.log(reg.lastIndex); // 10
+
+        console.log(reg.test(str)); // false
+        console.log(reg.lastIndex); // 0
+        // VM1596: 4 true
+        // VM1596: 5 5
+
+        // VM1596: 7 true
+        // VM1596: 8 10
+
+        // VM1596: 10 false
+        // VM1596: 11 0
+
+        var reg = /a|b/i;//a或b 等价于 /[ab]/
+        // []表示：或
+        // [^ ] 表示：除了
+        var str = 'abcdefg';
+        console.log(reg.test(str));
+        // VM1890: 3 true
+
+        var reg = /a[gfeh]c/;//是否包含agc afc aec ahc字符串
+        var str = 'abgfeucsnbvufagc';
+        console.log(reg.test(str));
+        // VM1984: 3 true
+
+        // 支持正则表达式的 String 对象的方法、
+
+    </script>
+</body>
+
+</html>

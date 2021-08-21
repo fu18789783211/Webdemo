@@ -3,11 +3,15 @@ var a=null;
 console.log(a);
 
 // undefined
-// 变量声明为赋值则控制台打印为undefined
+// 变量声明未赋值 ，则控制台打印为undefined
 var b;
 console.log(b);
+
+// 未声明是用typeof显示underfined
+
 // 函数没有返回值也会打印undefined
 
+// 调用函数，如果没有传参，会显示underfined
 function foo(name) {
     console.log(name);
 }

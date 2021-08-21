@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="Expense-Tracker.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="title">Expense Tracker</div>
+
+        <div class="detail">
+            <div class="balance">
+                YOUR BALANCE
+                <div class="price">$0.00</div>
+            </div>
+
+            <div class="poise">
+                <div class="item">
+                    <div class="income">INCOME</div>
+                    <div class="in-price">$0.00</div>
+                </div>
+                <div class="line"></div>
+                <div class="item">
+                    <div class="expense">EXPENSE</div>
+                    <div class="ex-price">$0.00</div>
+                </div>
+            </div>
+
+            <div class="history">
+                History
+                <div class="h-line"></div>
+                <div class="add-item">
+                    <button class="btn">x</button>
+                    <div class="detail-left">message</div>
+                    <div class="detail-right">price</div>
+                </div>
+            </div>
+            <div class="history">
+                Add new transaction
+                <div class="h-line"></div>
+            </div>
+
+            <div class="e-text"> Text</div>
+            <br>
+            <input type="text" id="text" placeholder="Enter text...">
+            <div class="e-text">Amount
+                <br>(negative - expense, positive - income)
+            </div>
+            <br>
+            <input type="number"  id="amount" placeholder="Enter amount...">
+
+            <div class="submit">
+                <input type="submit"  id="submit" onclick="clicksubmit()" value="Add transaction">
+            </div>
+        </div>
+    </div>
+    <script src="Expense-Tracker.js"></script>
+    <form action="http://localhost:3000/test/data" method="post" enctype="multipart/form-data">
+        <input type="text" name="receive1" value="some text">
+        <input type="file" name="receive2">
+        <button type="submit">Submit</button>
+      </form>
+</body>
+
+</html>
