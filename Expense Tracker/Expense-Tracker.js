@@ -19,19 +19,16 @@ function clicksubmit(){
     xhr.open("POST", 'http://localhost:3000/test/data');
     
     //发送合适的请求头信息
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.withCredentials = true
-    xhr.onload = function () {
+    xhr.onload = function (body) {
         // 请求结束后,在此处写处理代码
-        console.log('+++++++++++++')
+        console.log('+++++++++++++', body)
     };
-    xhr.send(JSON.stringify({
-        receive1,
-        receive2
-    }));
-    // xhr.send('string');
-    // xhr.send(new Blob());
-    // xhr.send(new Int8Array());
-    // xhr.send({ form: 'data' });
-    // xhr.send(document);
+    xhr.send(data);
 }
+
+//btn删除事件
+function btndelete(){
+    document.getElementById('add-item').removeAttribute('style');
+}
+
+

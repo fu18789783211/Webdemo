@@ -89,11 +89,7 @@ body{
     margin: 10px 0;
     border-right: 5px solid #2ecc71;
     font-weight: normal;
-    
 }  
-.add-item:hover>.btn{
-    visibility:collapse;
-}
 .btn{
     width: 20px;
     height: 20px;
@@ -103,12 +99,12 @@ body{
     font-size: 5px;
     float: left;
     margin-left: -30px;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
-.detail-left{
+/* .detail-left{
 
-}
+} */
 .detail-right{
     margin-top: -21px;
     float: right;
