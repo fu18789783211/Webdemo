@@ -12,6 +12,10 @@ var fun3 = (p1, p2) => {
   console.log('fun3', p1, p2)
 }
 
+() =>{
+  
+}
+
 (function () {
   console.log('自执行函数，没有返回值fun')
 })()

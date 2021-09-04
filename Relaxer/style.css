@@ -5,6 +5,7 @@ body{
 *{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 .overall{
     display: flex;
@@ -14,7 +15,6 @@ body{
 }
 h1{
     font-size: 2em;
-    color:#fff;
 }
 .Circle{
     position:relative;
@@ -24,8 +24,28 @@ h1{
     background-color: #010f1c;
     border-radius: 192px;
     background: conic-gradient( #55b7a4 0%, #55b7a4 40%, #fff 40%,#fff 60%,#2a5b52 60%,#2a5b52 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 /*animation: duration  timing-function  delay  itertion-count direation name  */
-    animation: 5s linear 0s infinite alternate narrow; 
+    /* 放大 */
+    /* animation: enlarge 3s linear; */
+    /* 缩小 */
+    /* animation: narrow  3s linear; */
+}
+.Circle.enlarge{
+    animation: enlarge 3s linear;
+}
+@keyframes enlarge{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.Circle.narrow{
+    animation: narrow 3s linear;
 }
 @keyframes narrow{
     from{
@@ -35,30 +55,26 @@ h1{
         transform: scale(0.8);
     }
 }
-.Circle .text{
+.Circle .Inner-circle{
     position:absolute;
     width: 354px;
     height: 354px;
     border-radius: 177px;
     background: black;
     margin: 15px;
+    color: #fff;
 }
-.text-content{
-    position: absolute;
-    color: white;
-    margin: 165px;
+.text{
+    
 }
 .rotating-lever{
     width: 20px;
     height: 220px;
     background-color: transparent;
     position: absolute;
-    left: 169px;
-    top: -43px;
-    animation-iteration-count: infinite;
-    animation-name: whirling;
-    animation-duration: 10s;
-    transform-origin: bottom;
+    top: -30px;
+    animation: whirling 10s infinite;
+    transform-origin: bottom center;
 }
 @keyframes whirling{
     100%{
