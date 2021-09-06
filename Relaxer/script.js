@@ -50,7 +50,7 @@ const totaltime = 7500;
 const narrowtime = 3000;
 const holdtime = 1500;
 const enlargetime = 3000;
-animationzoom();
+// animationzoom();
 function animationzoom() {
     setTimeout(() => {
         text.innerText = 'Breathe In!';

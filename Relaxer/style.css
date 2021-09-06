@@ -32,16 +32,20 @@ h1{
     /* animation: enlarge 3s linear; */
     /* 缩小 */
     /* animation: narrow  3s linear; */
+    animation: enlarge 3s linear infinite;
 }
-.Circle.enlarge{
+/* .Circle.enlarge{
     animation: enlarge 3s linear;
-}
+} */
 @keyframes enlarge{
-    from{
+    0%{
         transform: scale(0.8);
     }
-    to{
+    50% {
         transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
     }
 }
 .Circle.narrow{
