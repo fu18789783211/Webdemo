@@ -68,6 +68,9 @@ h1{
     margin: 15px;
     color: #fff;
 }
+.text{
+    z-index: 2;
+}
 .rotating-lever{
     width: 20px;
     height: 220px;

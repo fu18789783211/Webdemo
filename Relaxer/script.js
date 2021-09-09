@@ -50,11 +50,11 @@ const totaltime = 7500;
 const narrowtime = 3000;
 const holdtime = 1500;
 const enlargetime = 3000;
-// animationzoom();
+animationzoom();
 function animationzoom() {
     setTimeout(() => {
         text.innerText = 'Breathe In!';
-        circle.className = 'circle narrow';
+        // circle.className = 'circle narrow';
     }, narrowtime);
 
     setTimeout(()=>{
@@ -63,6 +63,6 @@ function animationzoom() {
 
     setTimeout(()=>{
         text.innerText='Breathe Out';
-        circle.className='circle enlarge';        
+        // circle.className='circle enlarge';        
     },enlargetime);
 }
