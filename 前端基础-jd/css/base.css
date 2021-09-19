@@ -7,7 +7,7 @@ fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none;
 ul, ol {
     list-style: none;   
 }
-input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}  /*字体一般是指定这两个*/
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体",sans-serif;}  /*字体一般是指定这两个*/
 select, input { vertical-align:middle;}
 select, input, textarea { font-size:12px; margin:0; }
 textarea { resize:none; } /*禁止文本输入框在右下角拖拽（因为拖动后会调整输入框大小）*/
@@ -16,7 +16,7 @@ table { border-collapse:collapse; }/*表格合并*/
 body {
     font:12px/150% Arial,Verdana,"\5b8b\4f53";  /*\5b8b\4f53指的是宋体*/
     color:#666;
-    background:#fff
+    background:#fff;
 }
 
 /*start:清除浮动【推荐此方式进行清除浮动】。左浮动和右浮动都清除了，盒子刚好达到闭合的状态*/
@@ -69,7 +69,7 @@ s,i,em{font-style:normal;text-decoration: none;}  /*去掉i标签和em标签的�
 .hide {
     display: none
 }
-.shoutcut{
+.shortcut{
     height: 30px;
     line-height: 30px;
     background-color: #f1f1f1;
