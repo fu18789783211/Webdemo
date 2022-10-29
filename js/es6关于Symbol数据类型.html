@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ### 1、将Symbol作为对象的属性值
+        let mySymbol = Symbol();
+        let obj = {
+            name: 'smyhvae',
+            age: 26
+        };
+        //obj.mySymbol = 'male'; //错误：不能用 . 这个符号给对象添加 Symbol 属性。
+        obj[mySymbol] = 'hello';    //正确：通过**属性选择器**给对象 添加 Symbol 属性 。后面的属性值随便写。
+        console.log(obj);
+
+        /* 既然symbol()是函数，函数就能传参数，通过不同的参数就能区分不同的symbol */
+        //在括号里加入参数，来标识不同的Symbol
+        let mySymbol1 = Symbol('one');
+        let mySymbol2 = Symbol('two');
+        console.log(mySymbol1 == mySymbol2); //打印结果：false
+        console.log(mySymbol1);         //打印结果：Symbol(one)
+        console.log(mySymbol2);         //打印结果：Symbol(two)。颜色为红色。
+        console.log(mySymbol2.toString());//打印结果：Symbol(two)。颜色为黑色。
+
+    </script>
+</body>
+
+</html>

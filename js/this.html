@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fun() {
+      console.log(this);
+      console.log(this.name);
+    }
+
+    var obj1 = {
+      name: 'smyh',
+      sayName: fun,
+    };
+
+    var obj2 = {
+      name: 'vae',
+      sayName: fun,
+    };
+
+    var name = '全局的name属性';
+
+    //以函数形式调用，this是window
+    fun(); //可以理解成 window.fun()
+    obj1.sayName() // obj1
+    obj2.sayName() // obj2
+
+//     效果
+// window {...}
+// VM1301:3 全局的name属性
+// VM1301:2 {name: "smyh", sayName: ƒ}
+// VM1301:3 smyh
+// VM1301:2 {name: "vae", sayName: ƒ}
+// VM1301:3 vae
+  </script>
+</body>
+
+</html>

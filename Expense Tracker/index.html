@@ -34,11 +34,13 @@
             <div class="history">
                 History
                 <div class="h-line"></div>
+               <div class="">
                 <div class="add-item">
-                    <button class="btn">x</button>
+                    <button class="btn" onclick="btndelete()">x</button>
                     <div class="detail-left">message</div>
                     <div class="detail-right">price</div>
                 </div>
+               </div>
             </div>
             <div class="history">
                 Add new transaction
@@ -60,11 +62,6 @@
         </div>
     </div>
     <script src="Expense-Tracker.js"></script>
-    <form action="http://localhost:3000/test/data" method="post" enctype="multipart/form-data">
-        <input type="text" name="receive1" value="some text">
-        <input type="file" name="receive2">
-        <button type="submit">Submit</button>
-      </form>
 </body>
 
 </html>

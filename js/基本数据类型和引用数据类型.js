@@ -3,14 +3,14 @@
 // 内置对象 Function、Array、Date、RegExp、Error等都是属于 Object 类型。
 // 也就是说，除了那五种基本数据类型之外，其他的，都称之为 Object类型。
 
-// 基本数据类型：传数值
+// 基本数据类型：传数值（存储在栈内存中）
 var a=100;
 var b=a;
 a++;
 console.log(a);//a=101
 console.log(b);//b=100
 
-//引用数据类型:传地址
+//引用数据类型:传地址 （存储在堆内存中）
 var obj1= new Object();
 obj1.name='yyds'
 var obj2=obj1;//传地址

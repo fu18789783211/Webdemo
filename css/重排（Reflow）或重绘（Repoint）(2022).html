@@ -1,0 +1,21 @@
+<!-- Reflow 重排（回流）或者 Repaint 重绘 -->
+<!-- 重绘不一定会重排，重排一定会重绘 -->
+
+重排Reflow:
+  页面初始渲染阶段；
+  改变字体大小；
+  改变元素位置；
+  改变元素尺寸；
+  改变元素内容；
+  改变浏览器窗口尺寸；
+  激活css伪类;
+  设置一次style的值就重排一次;
+  查询某些属性或调用某些计算方法:offsetWidth、offsetHeight等,
+  当我们调用 getComputedStyle方法,或者IE里的 currentStyle 时，也会触发重排，原理是一样的，都为求一个“即时性”和“准确性”;
+
+重绘Repaint:元素的外观改变而布局没有改变
+  color border-style visibility background text-decoration
+  background-image background-position
+  background-repeatoutline-coloroutlineoutline-styleborder-radiusoutline-widthbox-shadowbackground-size
+
+

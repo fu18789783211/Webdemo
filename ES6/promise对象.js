@@ -1,0 +1,1 @@
+// Promise的三种状态： pending（等待中），fulfilled（已完成），rejected（已失败）

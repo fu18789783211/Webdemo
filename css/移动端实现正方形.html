@@ -1,0 +1,27 @@
+<!-- 在移动端实现一个正方形，离屏幕左右间距都是30px -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .square{
+            width: 330px;
+            height: 330px;
+            background: blue;
+            /* 跟窗口比较位置 */
+            position:fixed;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+</body>
+</html>

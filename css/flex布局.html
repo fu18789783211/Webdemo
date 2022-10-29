@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        .box {
+            /* 主轴的方向 */
+            width: 100px;
+            height: 100px;
+            /* display: flex; */
+            /* flex-direction: column; */
+            border: 1px solid black;
+        }
+
+        body {
+            /* 主轴的方向 */
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+        }
+
+        /*  
+        flex-direction  属性决定主轴的方向（即项目的排列方向）。
+            flex-wrap   如果一条轴线排不下，如何换行。
+            flex-flow   属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+
+            justify-content 属性定义了项目在主轴上的对齐方式。
+            align-items  属性定义项目在交叉轴上如何对齐。
+            
+            align-content 属性定义了多根轴线的对齐方式.
+            
+            */
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+
+</html>

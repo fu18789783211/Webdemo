@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 500px;
+            height: 200px;
+            border:  2px dashed blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 利用flex布局实现垂直居中，其中flex-direction: column定义主轴方向为纵向。因为flex布局是CSS3中定义，在较老的浏览器存在兼容性问题。 -->
+    <div class="father">
+        <p>利用flex布局实现垂直居中</p>
+    </div>
+</body>
+</html>
