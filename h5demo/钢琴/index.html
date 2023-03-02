@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piano</title>
+    <style>
+        body {
+            background: #333333;
+            margin: 0;
+        }
+
+        .outside {
+            width: 850px;
+            height: 450px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px 1px white;
+            /*  x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 -->>如果只给出两个值, 那么这两个值将会被当作x,y轴偏移量 */
+            margin: 0 auto;
+            position: relative;
+            top: 250px;
+        }
+
+        .inside {
+            width: 800px;
+            height: 400px;
+            background: no-repeat center/100% url('./keys.png');
+            /* <bg-size> 只能紧接着 <position> 出现，以"/"分割，如： "center/80%"*/
+            /* 不重复 */
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            display: flex;
+        }
+
+        .Pianokeys {
+            height: 100%;
+            flex-grow: 1;
+            /* flex 子盒子之间的宽度比*/
+        }
+
+        .Pianokeys:active {
+            /* 设置透明度 用线性度*/
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(150, 150, 150, 0.1));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="inside">
+            <div class="Pianokeys" onclick="play(0)"></div>
+            <div class="Pianokeys" onclick="play(1)"></div>
+            <div class="Pianokeys" onclick="play(2)"></div>
+            <div class="Pianokeys" onclick="play(3)"></div>
+            <div class="Pianokeys" onclick="play(4)"></div>
+            <div class="Pianokeys" onclick="play(5)"></div>
+            <div class="Pianokeys" onclick="play(6)"></div>
+            <div class="Pianokeys" onclick="play(7)"></div>
+            <div class="Pianokeys" onclick="play(8)"></div>
+
+            <audio src="../钢琴/bgm/1.oga"></audio>
+            <audio src="../钢琴/bgm/2.oga"></audio>
+            <audio src="../钢琴/bgm/3.oga"></audio>
+            <audio src="../钢琴/bgm/4.oga"></audio>
+            <audio src="../钢琴/bgm/5.oga"></audio>
+            <audio src="../钢琴/bgm/6.oga"></audio>
+            <audio src="../钢琴/bgm/7.oga"></audio>
+            <audio src="../钢琴/bgm/8.oga"></audio>
+            <audio src="../钢琴/bgm/9.oga"></audio>
+        </div>
+    </div>
+
+    <script>
+        // querySelectorAll querySelectorAll() 方法将文档中与指定 CSS 选择器匹配的所有元素作为静态 NodeList 对象返回。
+        // NodeList 对象表示节点的集合。可以通过索引号访问节点 。索引从 0 开始。
+        var bgm = document.querySelectorAll('audio');
+        var handkey = document.querySelectorAll('.Pianokeys');
+
+        // 播放音乐事件
+        function play(n) {
+            bgm[n].load();
+            bgm[n].play();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+    background-image: url(./image/Relaxer-image.jpg);
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.overall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2em;
+}
+.Circle{
+    position:relative;
+    width: 384px;
+    height: 384px;
+    margin: 210px 0  255px 0;
+    background-color: #010f1c;
+    border-radius: 192px;
+    background: conic-gradient( #55b7a4 0%, #55b7a4 40%, #fff 40%,#fff 60%,#2a5b52 60%,#2a5b52 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*animation: duration  timing-function  delay  itertion-count direation name  */
+    /* 放大 */
+    /* animation: enlarge 3s linear; */
+    /* 缩小 */
+    /* animation: narrow  3s linear; */
+    animation: enlarge 3s linear infinite;
+}
+/* .Circle.enlarge{
+    animation: enlarge 3s linear;
+} */
+@keyframes enlarge{
+    0%{
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+.Circle.narrow{
+    animation: narrow 3s linear;
+}
+@keyframes narrow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.8);
+    }
+}
+.Circle .Inner-circle{
+    position:absolute;
+    width: 354px;
+    height: 354px;
+    border-radius: 177px;
+    background: black;
+    margin: 15px;
+    color: #fff;
+}
+.text{
+    z-index: 2;
+}
+.rotating-lever{
+    width: 20px;
+    height: 220px;
+    background-color: transparent;
+    position: absolute;
+    top: -30px;
+    animation: whirling 10s infinite;
+    transform-origin: bottom center;
+}
+@keyframes whirling{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.pellet{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color:#fff;
+}
