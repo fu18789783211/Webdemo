@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAXdemo1</title>
+</head>
+<body>
+    <div id="mydiv"><h2>AJAX要修改的部分</h2></div>
+    <button type="button" onclick="myclick()">click</button>
+    <a href="./demo2.html">demo2</a>
+
+    <script>
+        function myclick(){
+            var xmlhttp;
+            if(window.XMLHttpRequest){
+                // IE7+ ... 浏览器执行的代码
+                xmlhttp = new XMLHttpRequest();
+            }
+            else{
+                //IE6,IE5 浏览器执行的代码
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                    document.getElementById("mydiv").innerHTML = xmlhttp.responseText;
+                }
+            }
+
+            // 规定（设置）请求
+            xmlhttp.open("GET","/api/helloworld",true);
+            //发送请求
+            xmlhttp.send();
+        }
+    </script>
+</body>
+</html>
