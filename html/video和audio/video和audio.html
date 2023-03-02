@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- video元素可以在文档内嵌入媒体播放器，可以在文档内播放视频和音频 -->
+    <!-- 加上controls这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。 -->
+    <video controls> 
+        <!-- source可以指定视频源 -->
+        <source src="flower.webm" type="video/webm">
+    </video>
+    <p>浏览器并不是都支持相同的视频格式，所以你可以在 “source” 元素里提供多个视频源，然后浏览器将会使用它所支持的第一个源。</p>
+    <audio controls>
+        <source src="" type="">
+        <!-- 浏览器并不是都支持相同的音频格式，所以你可以在 “source” 元素里提供多个视频源，然后浏览器将会使用它所支持的第一个源。 -->
+    </audio>
+</body>
+</html>

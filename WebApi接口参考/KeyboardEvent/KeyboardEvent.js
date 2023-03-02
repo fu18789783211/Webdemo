@@ -1,0 +1,1 @@
+//键盘事件有三个事件类型：keydown,keypress,keyup

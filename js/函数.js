@@ -5,15 +5,15 @@ var fun1 = function () {
 
 // 使用函数声明的形式声明的函数会被声明提前， 可以先调用在声明
 function fun2(p1, p2) {
-  console.log('fun2', p1, p2)
+  console.log('fun2', p1, p2);
 }
 // 箭头函数
 var fun3 = (p1, p2) => {
-  console.log('fun3', p1, p2)
+  console.log('fun3', p1, p2);
 }
 // 立即执行函数
 (function () {
-  console.log('自执行函数，没有返回值fun')
+  console.log('自执行函数，没有返回值fun');
 })()
 
 fun1();

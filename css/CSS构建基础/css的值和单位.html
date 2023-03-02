@@ -1,0 +1,53 @@
+<!--  绝对长度单位:  -->
+<!-- /* cm	  厘米	1cm = 96px/2.54
+   mm	  毫米	1mm = 1/10th of 1cm
+   Q	  四分之一毫米	1Q = 1/40th of 1cm
+   in	  英寸	1in = 2.54cm = 96px
+   pc	  十二点活字	1pc = 1/6th of 1in
+   pt	  点	1pt = 1/72th of 1in
+   px	  像素	1px = 1/96th of 1in */ -->
+
+<!--  相对长度单位  -->
+  <!-- /* em  在font-size中使用相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小：例如 width
+  ex	字符“x”的高度
+  ch	数字“0”的宽度
+  rem	根元素的字体大小
+  lh	元素的 line-height
+  vw	视窗宽度的 1%
+  vh	视窗高度的 1%
+  vmin	视窗较小尺寸的 1%
+  vmax	视图大尺寸的 1% */ -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .wrapper{
+         font-size: 1em;
+      }
+      .px{
+         /* 绝对长度单位 */
+         width: 200px;
+      }
+      .vw{
+         /* 视窗宽度的10% */
+         width: 10vw;  
+      }
+      .em{
+         /* em 除了font-size之外的其他属性相对于自身字体大小 */
+         width: 10em;
+      }
+   </style>
+  </head>
+  <body>
+   <div class="wrapper">
+      <div class="px">绝对长度单位</div>
+      <div class="vw">相对长度单位：1vw相对于视窗大小的 1%</div>
+      <div class="em">相对长度单位：font-size之外属性相对于自身字体大小</div>
+   </div>
+  </body>
+  </html>
