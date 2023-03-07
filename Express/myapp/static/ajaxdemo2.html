@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAXdemo2</title>
+</head>
+
+<body>
+
+    <!-- 创建一个简单的XMLHttpRequest，从一个XML文件中返回数据。 -->
+
+
+    <h1>从 XML文件 中获取数据</h1>
+    <p><b>Status:</b><span id="status"></span></p>
+    <p><b>Status Text:</b><span id="statusText"></span></p>
+    <p><b>Response:</b><span id="response"></span></p>
+    <button type="button" onclick="myclick()">获取xml数据</button>
+
+    <script>
+        function myclick() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();//IE7+之后浏览器
+            }
+            else {
+                xmlhttp = new ActiveXObject();//IE6之前的浏览器
+            }
+
+            var onreadystatechange = function () {
+                if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
+                    document.getElementById("status").innerHTML = xmlhttp.status;
+                    document.getElementById("statusText").innerHTML = xmlhttp.statusText;
+                    document.getElementById("response").innerHTML = xmlhttp.responseText;
+                }
+            }
+
+            //配置请求命令
+            xmlhttp.open("GET", "ajaxdemo2.xml", true);
+            //发送请求
+            xmlhttp.send();
+        }
+    </script>
+</body>
+
+</html>
